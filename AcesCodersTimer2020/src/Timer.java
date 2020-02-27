@@ -1,4 +1,6 @@
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
@@ -13,8 +15,6 @@ import javax.swing.JMenuItem;
 public class Timer extends javax.swing.JFrame implements MouseListener, MouseMotionListener {
 
     private int currentX, currentY;
-    
-    
 
     /**
      * Creates new form Timer
@@ -42,7 +42,10 @@ public class Timer extends javax.swing.JFrame implements MouseListener, MouseMot
 
         mainPanel.addMouseListener(this);
         mainPanel.addMouseMotionListener(this);
-        
+
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        setSize(screenSize.width, 220);
+
     }
 
     @Override
@@ -101,21 +104,29 @@ public class Timer extends javax.swing.JFrame implements MouseListener, MouseMot
 
         popupMenu = new javax.swing.JPopupMenu();
         mainPanel = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         popupMenu.setBackground(new java.awt.Color(204, 204, 255));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
+        mainPanel.setBackground(new java.awt.Color(4, 25, 66));
+
+        jLabel1.setFont(new java.awt.Font("Bauhaus 93", 1, 200)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 204, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("00:00:00");
+
         javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
         mainPanel.setLayout(mainPanelLayout);
         mainPanelLayout.setHorizontalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 648, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1186, Short.MAX_VALUE)
         );
         mainPanelLayout.setVerticalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 257, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -126,7 +137,7 @@ public class Timer extends javax.swing.JFrame implements MouseListener, MouseMot
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -169,6 +180,7 @@ public class Timer extends javax.swing.JFrame implements MouseListener, MouseMot
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JPopupMenu popupMenu;
     // End of variables declaration//GEN-END:variables
