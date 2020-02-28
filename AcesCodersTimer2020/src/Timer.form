@@ -57,26 +57,26 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="jLabel1" alignment="0" pref="1186" max="32767" attributes="0"/>
+              <Component id="labelTiimeDisplay" alignment="1" pref="1186" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="jLabel1" alignment="0" pref="220" max="32767" attributes="0"/>
+              <Component id="labelTiimeDisplay" alignment="0" pref="220" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="labelTiimeDisplay">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Bauhaus 93" size="200" style="1"/>
+              <Font name="Calibri" size="140" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="cc" red="cc" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="00:00:00"/>
+            <Property name="text" type="java.lang.String" value="00 : 00 : 00"/>
           </Properties>
         </Component>
       </SubComponents>
